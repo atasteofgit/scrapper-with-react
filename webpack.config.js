@@ -1,27 +1,21 @@
-var path = require('path');
-
 module.exports = {
-
-    entry: path.resolve(__dirname, 'app') + '/index.js',
-    output: {
-        path: path.resolve(__dirname, 'public'),
-        filename: 'bundle.js',
-        publicPath: '/app/'
-    },
-    module: {
-        loaders: [
-            {
-                test: /\.js$/,
-                include: path.resolve(__dirname, 'src'),
-                loader: 'babel-loader',
-                query: {
-                    presets: ['react', 'es2015']
-                }
-            },
-            {
-                test: /\.css$/,
-                loader: 'style-loader!css-loader'
-            }
-        ]
-    }
-};
+  entry: './app/main.js',
+  output: {
+    path: './app',
+    filename: 'bundle.js'
+  },
+  devServer: {
+    inline: true,
+    contentBase: './app',
+    port: 8100
+  },
+  module: {
+    loaders: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: 'babel'
+      }
+    ]
+  }
+}
