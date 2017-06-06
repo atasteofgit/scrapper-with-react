@@ -1,16 +1,17 @@
-const express = require('express')
-const path = require('path')
-const port = process.env.PORT || 8080
-const app = express()
 
-// serve static assets normally
-app.use(express.static(__dirname + '/public'))
+const express = require('express');
+const fs = require('fs')
+const app = express();
+const port = process.env.port || 80085;
 
-// handle every other route with index.html, which will contain
-// a script tag to your application's JavaScript file(s).
-app.get('*', function (request, response){
-  response.sendFile(path.resolve(__dirname, 'public', 'index.html'))
+app.get('/', function(req, res){
+  res.sendFile('./public/index.html');
 })
 
-app.listen(port)
-console.log("server started on port " + port)
+app.listen(port, function(err) {
+  if (err) {
+    console.log('Disaster! Server error: '+ err)
+  } else {
+    console.log("You're listing to radio free scraper on port "+ port);
+  }
+})
