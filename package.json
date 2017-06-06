@@ -4,7 +4,7 @@
   "description": "",
   "main": "public/index.html",
   "scripts": {
-    "start": "nodemon "./public/index.html",
+    "start": "nodemon ./public/index.html",
     "dev": "webpack -w"
   },
   "author": "nilbog",
@@ -17,6 +17,9 @@
     "react-grid-system": "git+https://github.com/zoover/react-grid-system.git",
     "react-router": "^3.0.1",
     "react-tap-event-plugin": "^2.0.1",
+    "body-parser": "^1.17.1",
+    "cheerio": "^0.22.0",
+    "request": "^2.81.0"
     
   },
   "devDependencies": {
