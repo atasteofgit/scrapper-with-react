@@ -4,7 +4,7 @@
   "description": "",
   "main": "public/index.html",
   "scripts": {
-    "start": "nodemon ./public/index.html",
+    "start": "nodemon ./app.js",
     "dev": "webpack -w"
   },
   "author": "nilbog",
