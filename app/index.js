@@ -1,5 +1,6 @@
 import React from 'react'
-import {Router, hashHistory,Route} from 'react-router'
+import {Router, hashHistory, Route} from 'react-router'
+import Main from './Main'
 
 
 export default () => (

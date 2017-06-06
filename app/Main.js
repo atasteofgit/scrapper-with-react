@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import '../css/Main.css'
+import '../public/css/Main.css'
 
 class Main extends React.Component{
   render(){
